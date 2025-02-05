@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado Interactivo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        img {
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="dado" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Dice-1-b.svg" alt="Dado" onclick="lanzarDado()">
+    
+    <script>
+        const imagenesDados = [
+            "https://upload.wikimedia.org/wikipedia/commons/1/1b/Dice-1-b.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/5/5f/Dice-2-b.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/b/b1/Dice-3-b.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/fd/Dice-4-b.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/08/Dice-5-b.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/2/26/Dice-6-b.svg"
+        ];
+
+        function lanzarDado() {
+            let numero = Math.floor(Math.random() * 6);
+            document.getElementById("dado").src = imagenesDados[numero];
+        }
+    </script>
+</body>
+</html>
